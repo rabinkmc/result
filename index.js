@@ -67,11 +67,11 @@ let arr=[
   },
   {
     pari: {
-     "math": 30,
-      "science": 40,
-      "social": 40,
-      "nepali": 20,
-         "computer": 100
+     "math": 90,
+      "science": 90,
+      "social": 90,
+      "nepali": 100,
+        "computer": 10
     }
   }
 ]
@@ -95,22 +95,27 @@ for(let item of arr){
             n=Object.keys(item[key]).length
 
             avg=sum/n
-            if(item[key][subject]<40){
+            if(item[key][subject]>=40){
                 result[key]={status:'Pass'}
-                console.log((item[key][subject]))
+                // console.log((item[key][subject]))
+                result[key]={percent:avg+'%',status:'Pass'}
 
             }
             else{
-                result[key]='Pass'
-                 result[key]={status:'Fail'}
+               result[key]={percent:avg+'%',status:'Fail'}
             }
 
 
         }
-          // console.log(n)
-
-        result[key]={percent:avg+'%'}
-
+          // console.log(Object.values(item[key]))
+        // for(let out of Object.values(item[key])){
+        //     // console.log(out)
+        //
+        //     if(out>=40){
+        //         console.log(item,out)
+        //          result[key]={percent:avg+'%',status:'Pass'}}
+        //
+        //     else{ result[key]={percent:avg+'%',status:'Fail'}}}
     }
 }
    console.log(result)
