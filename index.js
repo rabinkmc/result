@@ -96,7 +96,7 @@ for(let item of arr){
 
             avg=sum/n
             if(item[key][subject]>=40){
-                result[key]={status:'Pass'}
+                // result[key]={status:'Pass'}
                 // console.log((item[key][subject]))
                 result[key]={percent:avg+'%',status:'Pass'}
 
